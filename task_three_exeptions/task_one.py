@@ -1,6 +1,4 @@
 
-import sys
-
 def hello_user():
     while True:
         try:
