@@ -25,7 +25,6 @@ def planet_command(update: Update, context: CallbackContext):
             reply_text(result, reply_to_message_id=update.message.message_id)
 
     elif update.message is None:
-        print(update.edited_message)
 
         try:
             context.bot.editMessageText(
@@ -40,6 +39,6 @@ def planet_command(update: Update, context: CallbackContext):
 def get_constellation(val, time):
     try:
         obj = getattr(ephem, val.capitalize())
-        return ephem.constellation(obj(time))
+        return ephem.constellation(obj(time))[1]
     except AttributeError:
         return f"{val} is not found"
