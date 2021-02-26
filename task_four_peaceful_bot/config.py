@@ -11,3 +11,14 @@ if "TELEGRAM_PROXY_URL" == os.environ:
             "password": os.environ["TELEGRAM_PROXY_PASSWORD"],
         },
     }
+else:
+    pass
+
+PARAMS = {'headers': {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:45.0) '
+                      'Gecko/20100101 Firefox/45.0'},
+        'url': 'http://города-россия.рф/alphabet.php'
+    }
+
+path = os.path.dirname(__file__)
+assets = os.path.join(path, 'assets')
